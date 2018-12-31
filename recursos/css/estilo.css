@@ -12,7 +12,7 @@ body{
 	font-family: gadugi; /*Fonte padrão da página*/
 	position: relative;
 	height: 100%;
-	background-image: url("../imagens/bixopp2017.jpg");
+	background-image: url("/amigosratinhos/recursos/imagens/bixopp2017.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	background-attachment: fixed;
@@ -75,9 +75,10 @@ body{
 	font-size: 4em;
 	font-variant: small-caps;
 	font-weight: normal;
-	text-align: right;
-	display: initial;
-	text-shadow: 1px 1px #000000;
+	text-align: center;
+	display: block;
+	margin: 50px 0px 0px 200px;
+	text-shadow: 1px 1px #000000;	
 }
 .conteudo-texto{
 	color: #FFFFFF;
@@ -196,7 +197,7 @@ body{
 @font-face
 	{
 		font-family: gadugi;
-		src:url('../fontes/gadugi.ttf');
+		src:url('/amigosratinhos/recursos/fontes/gadugi.ttf');
 	}
 
 /*----------Adaptação ao tamanho de tela---------*/

@@ -1,29 +1,29 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="recursos/css/estilo.css" />
+        <link rel="stylesheet" type="text/css" href="/amigosratinhos/recursos/css/estilo.css" />
         <meta charset="utf-8" />
     </head>
     <body>
-        <header class="cabecalho testar2">
+        <header class="cabecalho">
             <h1 class="titulo">Amigos Ratinhos</h1>				
-            <a class="ratinho testar3" href="http://rateria.com.br">
-                <img src="recursos/imagens/ratinho.png" />
+            <a class="ratinho" href="http://rateria.com.br">
+                <img src="/amigosratinhos/recursos/imagens/ratinho.png" />
             </a>			
-            <ul class="menu testar3">
+            <ul class="menu">
                 <li class="item-menu">
-                    <a href="." onclick="carregaInicio()">INÍCIO</a>
+                    <a href="/amigosratinhos">INÍCIO</a>
                 </li>
                 <li class="item-menu">
-                    <a href="viradas" onclick="carregaViradas()">VIRADAS</a>
+                    <a href="/amigosratinhos/viradas">VIRADAS</a>
                 </li>
                 <li class="item-menu">
-                    <a href="ritmos" onclick="carregaRitmos()">RITMOS</a>
+                    <a href="/amigosratinhos/ritmos">RITMOS</a>
                 </li>				
                 <li class="item-menu">
-                    <a href="musicas" onclick="carregaMusicas()">MÚSICAS</a>
+                    <a href="/amigosratinhos/musicas">MÚSICAS</a>
                 </li>
                 <li class="item-menu">
-                    <a href="elementos" onclick="carregaElementos()">ELEMENTOS</a>
+                    <a href="/amigosratinhos/elementos">ELEMENTOS</a>
                 </li>					
             </ul>
         </header>
