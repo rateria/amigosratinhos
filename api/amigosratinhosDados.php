@@ -86,6 +86,35 @@ function obter_virada_por_id($conexao, $args){
 		echo json_encode($virada[0]);
 }
 
+function listar_anos_de_ritmos($conexao){
+	
+	$query = RitmosSQL\listar_anos();
+	
+	$resultado = mysqli_query($conexao, $query);
+	
+	$anos = array();
+	while($ano = mysqli_fetch_assoc($resultado)){
+		$anos[] = $ano;
+	}
+	
+	echo json_encode($anos);
+}
+
+function listar_ritmos_por_ano($conexao, $args){
+	$ano = json_decode($args)->ano;
+	
+	$query = RitmosSQL\listar_por_ano($ano);
+	
+	$resultado = mysqli_query($conexao, $query);
+	
+	$ritmos = array();
+	while($ritmo = mysqli_fetch_assoc($resultado)){
+		$ritmos[] = $ritmo;
+	}
+	
+	echo json_encode($ritmos);
+}
+
 function listar_ritmos($conexao){
 	$query = RitmosSQL\listar_simples();
 	
@@ -130,6 +159,35 @@ function listar_musicas($conexao){
 	echo json_encode($musicas);
 }
 
+function listar_anos_de_musicas($conexao){
+	
+	$query = MusicasSQL\listar_anos();
+	
+	$resultado = mysqli_query($conexao, $query);
+	
+	$anos = array();
+	while($ano = mysqli_fetch_assoc($resultado)){
+		$anos[] = $ano;
+	}
+	
+	echo json_encode($anos);
+}
+
+function listar_musicas_por_ano($conexao, $args){
+	$ano = json_decode($args)->ano;
+	
+	$query = MusicasSQL\listar_por_ano($ano);
+	
+	$resultado = mysqli_query($conexao, $query);
+	
+	$musicas = array();
+	while($musica = mysqli_fetch_assoc($resultado)){
+		$musicas[] = $musica;
+	}
+	
+	echo json_encode($musicas);
+}
+
 function obter_musica_por_id($conexao, $args){
 	$idMusica = json_decode($args)->id;
 	
@@ -146,6 +204,19 @@ function obter_musica_por_id($conexao, $args){
 		echo "Erro de PK: A busca retornou mais de um resultado!";
 	else
 		echo json_encode($musica[0]);
+}
+
+function listar_instrumentos($conexao){
+	$query = ElementosSQL\listar_instrumentos();
+	
+	$resultado = mysqli_query($conexao, $query);
+	
+	$instrumentos = array();
+	while($instrumento = mysqli_fetch_assoc($resultado)){
+		$instrumentos[] = $instrumento;
+	}
+	
+	echo json_encode($instrumentos);
 }
 
 function listar_elementos_por_instrumento($conexao, $args){

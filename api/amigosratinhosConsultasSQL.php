@@ -165,6 +165,24 @@ namespace RitmosSQL{
 		";
 	}
 
+	function listar_anos(){
+		return "
+			SELECT ANO AS ano
+			FROM ritmos
+			GROUP BY ANO;
+		";
+	}
+
+	function listar_por_ano($ano){
+		return "
+			SELECT
+				ID AS id,
+				NOME AS nome
+			FROM ritmos
+			WHERE ANO = '{$ano}';
+		";
+	}
+
 	function obter_por_id($id){
 		return "
 			SELECT
@@ -271,6 +289,24 @@ namespace MusicasSQL{
 		";
 	}
 
+	function listar_anos(){
+		return "
+			SELECT ANO AS ano
+			FROM musicas
+			GROUP BY ANO;
+		";
+	}
+
+	function listar_por_ano($ano){
+		return "
+			SELECT
+				ID AS id,
+				NOME AS nome
+			FROM musicas
+			WHERE ANO = '{$ano}';
+		";
+	}
+
 	function obter_por_id($id){
 		return "
 			SELECT
@@ -339,6 +375,14 @@ namespace ElementosSQL{
 				INSTRUMENTO		AS instrumento
 			FROM elementos
 			ORDER BY NOME;
+		";
+	}
+
+	function listar_instrumentos(){
+		return "
+			SELECT INSTRUMENTO AS instrumento
+			FROM elementos
+			GROUP BY INSTRUMENTO;
 		";
 	}
 	
