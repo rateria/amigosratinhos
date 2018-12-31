@@ -1,0 +1,310 @@
+﻿body{
+	margin: 0px;
+	height: 100%;
+}
+div {
+	box-sizing: border-box;
+}
+
+/*Estrutura da página*/
+body{
+	color: #000000;
+	font-family: gadugi; /*Fonte padrão da página*/
+	position: relative;
+	height: 100%;
+	background-image: url("../imagens/bixopp2017.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+}
+/*------------------Cabeçalho--------------------*/
+.cabecalho{	
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	overflow: auto;
+}
+.titulo{
+	display: none;
+}
+.ratinho{
+	text-align: center;
+	display: block;
+	float: left;
+	padding: 10px;
+}
+.ratinho img{
+	width: 70px;
+}
+.menu{
+	text-align: center;
+	vertical-align: 50%;
+	max-width: 60%;
+	margin: auto;
+	margin-top: 20px;
+	padding: 10px 0px 10px 0px;
+	border-bottom: 1px solid #FFFFFF;
+}
+.item-menu{
+	vertical-align: top;
+	display: inline-block;
+	padding: 0% 5%;
+	list-style-type: none;
+}
+.item-menu a{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.item-menu a:hover{
+	text-decoration: underline;
+}
+/*--------------------Corpo----------------------*/
+.corpo{
+	position: relative;
+}
+/*Conteúdo*/
+.conteudo{	
+	text-align:center;
+	display: inline-block;
+	width: 70%;
+	margin: 10px 0px 10px 10px;
+}
+.conteudo-titulo{
+	color: #FFFFFF;
+	font-family: gadugi;
+	font-size: 4em;
+	font-variant: small-caps;
+	font-weight: normal;
+	text-align: right;
+	display: initial;
+	text-shadow: 1px 1px #000000;
+}
+.conteudo-texto{
+	color: #FFFFFF;
+	font-size: 1em;
+	text-align: justify;
+	float: right;
+	width: 75%;	
+	padding: 40px;
+	margin: auto;
+	text-shadow: 1px 1px #000000;
+}
+.conteudo-video{
+	display: none;
+	width: 80%;
+	height: 400px;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.conteudo-descricao{
+	font-size: 12pt;
+	text-align: left;
+	display: none;
+	position: relative;
+	width: 80%;
+	padding: 0px 10px 10px 10px;
+	margin: auto;
+	background-color: #FFFFFF;
+}
+#descricao-nome{
+	color: #000000;
+	font-size: 16pt;
+	display: inline-block;
+}
+.descricao-item{
+	font-weight: bold;
+	text-align: right;
+}
+.descricao-botoes{
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	margin: 10px;
+}
+.botoes{
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+.botoes-item{
+	display: inline-block;
+	border: 1px solid #2B2E83;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.botoes-item:hover{
+	background-color: #94B6D8;
+}
+.botoes-item img{
+	width: 32px;
+	height: 32px;
+}
+
+/*Lista*/
+.lista{
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	width: 25%;
+	margin: 10px 10px 10px 0px; 
+}
+.lista ul{
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+.lista-titulo{
+	color: #FFFFFF;
+	min-height: 25px;
+	padding: 10px 0px 0px 10px;
+	background-color: #6590C8;
+}
+.lista-subtitulo{
+	color: #FFFFFF;
+	min-height: 25px;
+	border-top: 2px solid #EBEBEB;
+	padding: 10px 0px 0px 30px;
+	background-color: #94B6D8;
+}
+.lista-subtitulo:hover{
+	background-color: #94B6D8;
+	cursor: pointer;
+}
+.lista-item{
+	min-height: 25px;
+	border-top: 2px solid #EBEBEB;
+	padding: 10px 0px 0px 30px;
+	background-color: #FFFFFF;
+}
+.lista-item a{
+	color: #000000;
+	text-decoration: none;
+}
+.lista-item:hover{
+	text-decoration: underline;
+	background-color: #BDCFE8;
+}
+.lista-base{
+	min-height: 10px;	
+	border-top: 2px solid #EBEBEB;
+	background-color: #6590C8;
+}
+
+
+/*----------------Outros recursos----------------*/
+@font-face
+	{
+		font-family: gadugi;
+		src:url('../fontes/gadugi.ttf');
+	}
+
+/*----------Adaptação ao tamanho de tela---------*/
+
+@media screen and (max-width: 960px) {
+	.conteudo-video{
+		width: 90%;
+	}
+	.conteudo-descricao{
+		width: 90%;
+	}
+}
+@media screen and (max-width: 800px) {
+	.conteudo-video{
+		width: 95%;
+	}
+	.conteudo-descricao{
+		width: 95%;
+	}
+}
+@media screen and (max-width: 700px) {
+
+	.ratinho{
+		float: none;
+	}
+	.menu{
+		max-width: 90%;
+		margin-bottom: 10px;
+	}
+	.item-menu{
+		padding: 0px 15px;
+	}
+	.corpo{
+		margin-bottom: 20px;
+	}
+	.conteudo{	
+		display: block;
+		width: 90%;
+		margin: auto;
+	}
+	.conteudo-texto{
+		float:none;
+	}
+	.conteudo-video{
+		width: 100%;
+	}
+	.conteudo-descricao{
+		width: 100%;
+		padding-top: 10px;
+	}
+	#descricao-nome{
+		display: block;
+		margin: 0px;
+	}
+	.descricao-botoes{
+		text-align: center;
+		position: initial;
+	}
+	.lista{
+		display: block;
+		position: relative;
+		width: 90%;
+		padding-top: 10px;
+		margin: auto;		
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.conteudo-video{
+		height: 300px;
+	}
+}
+@media screen and (max-width: 475px) {
+	.conteudo-titulo{
+		font-size: 3em;
+	}
+	.conteudo-video{
+		height: 250px;
+	}
+}
+@media screen and (max-width: 360px) {
+	.conteudo{
+		width: 98%;
+	}
+}
+@media screen and (max-width: 330px) {
+	.conteudo-titulo{
+		font-size: 2em;
+	}
+	.conteudo-texto{
+		font-size: 0.7em;
+	}
+	.item-menu{
+		display: block;
+	}
+}
+@media screen and (min-width: 1700px) {
+	.conteudo-video{
+		height: 700px;
+	}
+}
+@media screen and (min-width: 1500px) {
+	.conteudo-video{
+		height: 600px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.conteudo-video{
+		height: 500px;
+	}
+}
