@@ -6,7 +6,7 @@
     <body>
         <header class="cabecalho">
             <h1 class="titulo">Amigos Ratinhos</h1>				
-            <a class="ratinho" href="http://rateria.com.br">
+            <a class="ratinho" href="/">
                 <img src="/amigosratinhos/recursos/imagens/ratinho.png" />
             </a>			
             <ul class="menu">
