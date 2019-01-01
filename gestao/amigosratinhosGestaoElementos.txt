@@ -1,0 +1,86 @@
+function constroiTabelaElementos(lista){
+	var tabelaStr = '<thead>';
+	tabelaStr += '		<tr>';
+	tabelaStr += '			<th>ID</th>';
+	tabelaStr += '			<th>Nome</th>';
+	tabelaStr += '			<th>URL</th>';
+	tabelaStr += '			<th>Instrumento</th>';
+	tabelaStr += '			<th><b>Alterar</b></th>';
+	tabelaStr += '			<th><b>Remover</b></th>';
+	tabelaStr += '		</tr>';
+	tabelaStr += '	</thead>';
+	tabelaStr += '	<tbody>';
+	$.each(lista, function(i, item){		
+		if(i%2 == 0)
+			tabelaStr += '<tr class="linha_impar">';
+		else
+			tabelaStr += '<tr class="linha_par">';
+		tabelaStr += '		<td>'+item.id+'</td>';
+		tabelaStr += '		<td>'+item.nome+'</td>';
+		tabelaStr += '		<td>'+item.url+'</td>';
+		tabelaStr += '		<td>'+item.instrumento+'</td>';	
+		tabelaStr += '		<td><a href="#" class="botaoExcluir" onclick="alteraItem('+item.id+')"></a></td>';
+		tabelaStr += '		<td><a href="#" class="botaoExcluir" onclick="removeItem('+item.id+')"></a></td>';
+		tabelaStr += '	</tr>';
+	});
+	tabelaStr += '	</tbody>';
+	return tabelaStr;
+}
+
+function constroiFormularioElementos(){
+	var formStr = '';
+	formStr += '<fieldset>';
+	formStr += '	<legend id="modal-titulo">Adicionar Elemento</legend>';
+	formStr += '		<div class="linha_formulario">';
+	formStr += '		<label>';
+	formStr += '			<span style="padding-right:75px">Nome:</span>';
+	formStr += '			<input id="elemento-nome" type="text">';
+	formStr += '		</label>';
+	formStr += '		<label>';
+	formStr += '			<span style="padding-left:30px;padding-right:60px">URL:</span>';
+	formStr += '			<input id="elemento-url" type="text">';
+	formStr += '		</label>';
+	formStr += '	</div>';
+	formStr += '	<div class="linha_formulario">';
+	formStr += '		<label>';
+	formStr += '			<span style="padding-right:25px">Instrumento:</span>';
+	formStr += '			<select id="elemento-instrumento" class="longo">';
+	formStr += '				<option>-</option>';
+	formStr += '				<option value="caixa">Caixa</option>';
+	formStr += '				<option value="repinique">Repinique</option>';
+	formStr += '				<option value="surdo">Surdo</option>';
+	formStr += '				<option value="agogo">Agogô</option>';
+	formStr += '				<option value="tamborim">Tamborim</option>';
+	formStr += '				<option value="ganza">Ganzá</option>';
+	formStr += '			</select>';
+	formStr += '		</label>';
+	formStr += '	</div>';
+	formStr += '	<div class="linha_botoes">';
+	formStr += '		<button id="botaoRegistrar" class="botao" onclick="adicionaElemento()">Registrar</button>';
+	formStr += '		<button id="botaoCancelar" class="botao" onclick="fechaModal()">Cancelar</button>';
+	formStr += '	</div>';
+	formStr += '</fieldset>';
+	
+	return formStr;
+}
+
+function adicionaElemento(){
+	var nome = ($('#elemento-nome').val() != "")? $('#elemento-nome').val() : null;
+	var url = ($('#elemento-url').val() != "")? $('#elemento-url').val() : null;
+	var instrumento = ($('#elemento-instrumento').val() != "")? $('#elemento-instrumento').val() : null;
+	
+	var conteudo = JSON.stringify({
+		categoria: 'Elementos',
+		item: {
+			nome: nome,
+			url: url,
+			instrumento: instrumento
+		}
+	});
+	
+	$.post('amigosratinhosGestaoDados.php', {funcao: 'adicionar', args: conteudo}, function (resposta){
+		alert(resposta);
+		carregaTabela();
+		fechaModal();
+	});
+}
