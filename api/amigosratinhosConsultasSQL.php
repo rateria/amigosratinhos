@@ -447,30 +447,4 @@ namespace ElementosSQL{
 		";
 	}
 }
-
-namespace TextosSQL{
-	
-	function obter_por_categoria($categoria){
-		return "
-			SELECT
-				TITULO 	AS titulo,
-				TEXTO	AS texto
-			FROM
-				textos
-			WHERE
-				categoria = '{$categoria}'
-			";
-	}
-	
-	function listar(){
-		return "
-			SELECT
-				CATEGORIA	AS categoria,
-				TITULO 		AS titulo,
-				TEXTO 		AS texto
-			FROM
-				textos;
-		";
-	}
-}
 ?>

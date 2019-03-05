@@ -253,21 +253,4 @@ function obter_elemento_por_id($conexao, $args){
 		echo json_encode($elemento[0]);
 }
 
-function obter_texto_por_categoria($conexao, $args){
-	$categoria = json_decode($args)->categoria;
-	
-	$query = TextosSQL\obter_por_categoria($categoria);
-	
-	$resultado = mysqli_query($conexao, $query);
-	
-	$texto = array();
-	while($item = mysqli_fetch_assoc($resultado)){
-		$texto[] = $item;
-	}
-	
-	if(isset($texot[1]))
-		echo "Erro de PK: A busca retornou mais de um resultado!";
-	else
-		echo json_encode($texto[0]);
-}
 ?>
