@@ -1,13 +1,9 @@
 <?php
 //Dados para conexão do usuário amigo_ratinho
 $bdServidor = 'localhost';//'127.0.0.1';
-$bdBanco = 'amigosratinhos';
+$bdBanco = 'u133068202_amrat';
 
-#Credenciais XAMPP Windows7:Felipe-PC
-#$bdUsuario = 'amigo_ratinho';
-#$bdSenha = 'chupaquemachaquesabe';
-
-#Credendiais MySQL Ubuntu:felipe
-$bdUsuario = 'root';
-$bdSenha = '960403';
+#Credenciais MySQL
+$bdUsuario = 'u133068202_rtr';
+$bdSenha = 'wzMmmXHRoai3';
 ?>

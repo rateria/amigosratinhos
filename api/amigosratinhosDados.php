@@ -10,8 +10,8 @@ include "amigosratinhosConsultasSQL.php";
 //----------------- Recepção da camada de dados ----------------------------------------------------------------//
 
 $conexao = mysqli_connect($bdServidor, $bdUsuario, $bdSenha, $bdBanco);
-if (mysqli_connect_errno($conexao)){
-	echo "Ratinho, não consegui conectar ao banco. Verifique os dados inseridos ou peça ajuda a outro ratinho mais experiente! (--')";
+if ($errno = mysqli_connect_errno($conexao)){
+	echo "[Erro $errno] - Ratinho, não consegui conectar ao banco. Verifique os dados inseridos ou peça ajuda a outro ratinho mais experiente! (--')";
 	die();
 }
 mysqli_set_charset($conexao, "utf8");

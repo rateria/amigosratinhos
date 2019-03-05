@@ -3,18 +3,21 @@
 }
 
 function formataStringEnumeracao(texto){
-	var autores = texto.split(',');
-	var numAutores = autores.length;
-	var autoriaStr = '';
-	
-	if(numAutores > 1){
-		for(var i = 0; i < (numAutores - 2); i++){
-			autoriaStr += autores[i] + ', ';
-		}
+	if(!texto === null){
+		var autores = texto.split(',');
+		var numAutores = autores.length;
+		var autoriaStr = '';
 		
-		autoriaStr += autores[numAutores - 2] + ' e ';
+		if(numAutores > 1){
+			for(var i = 0; i < (numAutores - 2); i++){
+				autoriaStr += autores[i] + ', ';
+			}
+			autoriaStr += autores[numAutores - 2] + ' e ';
+		}
+		autoriaStr += autores[numAutores - 1];
 	}
-	autoriaStr += autores[numAutores - 1];
-	
+	else {
+		autoriaStr = ""
+	}
 	return autoriaStr;
 }
