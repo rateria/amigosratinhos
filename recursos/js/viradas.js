@@ -104,11 +104,11 @@ function carregaDescricaoVirada(virada){
 	descricaoStr += '	</tr>'		
 	$('#descricao-informacoes').html(descricaoStr);
 	
-	$('.botoes-item.bateria').attr('onclick', 'carregarVideo(\''+virada.url+'\')');
-	$('.botoes-item.caixa').attr('onclick', 'carregarVideo(\''+virada.urlCaixa+'\')');
-	$('.botoes-item.repinique').attr('onclick', 'carregarVideo(\''+virada.urlRepinique+'\')');
-	$('.botoes-item.surdo').attr('onclick', 'carregarVideo(\''+virada.urlSurdo+'\')');
-	$('.botoes-item.agogo').attr('onclick', 'carregarVideo(\''+virada.urlAgogo+'\')');
-	$('.botoes-item.tamborim').attr('onclick', 'carregarVideo(\''+virada.urlTamborim+'\')');
-	$('.botoes-item.ganza').attr('onclick', 'carregarVideo(\''+virada.urlGanza+'\')');
+	virada.url? 		$('.botoes-item.bateria').attr('onclick', 'carregarVideo(\''+virada.url+'\')') : $('.botoes-item.bateria').addClass('inexistente');
+	virada.urlCaixa? 	$('.botoes-item.caixa').attr('onclick', 'carregarVideo(\''+virada.urlCaixa+'\')') : $('.botoes-item.caixa').addClass('inexistente');
+	virada.urlRepinique? $('.botoes-item.repinique').attr('onclick', 'carregarVideo(\''+virada.urlRepinique+'\')') : $('.botoes-item.repinique').addClass('inexistente');
+	virada.urlSurdo? 	$('.botoes-item.surdo').attr('onclick', 'carregarVideo(\''+virada.urlSurdo+'\')') : $('.botoes-item.surdo').addClass('inexistente');
+	virada.urlAgogo? 	$('.botoes-item.agogo').attr('onclick', 'carregarVideo(\''+virada.urlAgogo+'\')') : $('.botoes-item.agogo').addClass('inexistente');
+	virada.urlTamborim? $('.botoes-item.tamborim').attr('onclick', 'carregarVideo(\''+virada.urlTamborim+'\')') : $('.botoes-item.tamborim').addClass('inexistente');
+	virada.urlGanza? 	$('.botoes-item.ganza').attr('onclick', 'carregarVideo(\''+virada.urlGanza+'\')') : $('.botoes-item.ganza').addClass('inexistente');
 }

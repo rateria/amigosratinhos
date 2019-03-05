@@ -137,6 +137,12 @@ body{
 .botoes-item:hover{
 	background-color: #94B6D8;
 }
+.botoes-item.inexistente{
+	background-color: #777777;
+}
+.botoes-item:hover.inexistente{
+	background-color: #777777;
+}
 .botoes-item img{
 	width: 32px;
 	height: 32px;
