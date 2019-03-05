@@ -22,7 +22,7 @@ namespace ViradasSQL{
 				URL_TAMBORIM	AS urlTamborim,
 				URL_GANZA		AS urlGanza
 			FROM viradas
-			ORDER BY NOME;
+			ORDER BY ANO, NOME;
 		";
 	}
 	
@@ -49,7 +49,8 @@ namespace ViradasSQL{
 				ID AS id,
 				NOME AS nome
 			FROM viradas
-			WHERE ANO = '{$ano}';
+			WHERE ANO = '{$ano}'
+			ORDER BY NOME;
 		";
 	}
 	
@@ -152,7 +153,7 @@ namespace RitmosSQL{
 				URL_TAMBORIM	AS urlTamborim,
 				URL_GANZA		AS urlGanza
 			FROM ritmos
-			ORDER BY NOME;
+			ORDER BY ANO, NOME;
 		";
 	}
 	
@@ -179,7 +180,8 @@ namespace RitmosSQL{
 				ID AS id,
 				NOME AS nome
 			FROM ritmos
-			WHERE ANO = '{$ano}';
+			WHERE ANO = '{$ano}'
+			ORDER BY NOME;
 		";
 	}
 
@@ -276,7 +278,7 @@ namespace MusicasSQL{
 				ORIGEM_ARRANJO	AS origemArranjo,
 				APRESENTACAO	AS apresentacao
 			FROM musicas
-			ORDER BY NOME;
+			ORDER BY ANO, NOME;
 		";
 	}
 	
@@ -303,7 +305,8 @@ namespace MusicasSQL{
 				ID AS id,
 				NOME AS nome
 			FROM musicas
-			WHERE ANO = '{$ano}';
+			WHERE ANO = '{$ano}'
+			ORDER BY NOME;
 		";
 	}
 
@@ -374,7 +377,7 @@ namespace ElementosSQL{
 				URL				AS url,
 				INSTRUMENTO		AS instrumento
 			FROM elementos
-			ORDER BY NOME;
+			ORDER BY INSTRUMENTO, NOME;
 		";
 	}
 
