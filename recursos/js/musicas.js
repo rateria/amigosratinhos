@@ -94,13 +94,13 @@ function carregaDescricaoMusica(musica){
 	$('#descricao-nome').html(musica.nome);
 		
 	var descricaoStr = '<tr>';
-	descricaoStr += '		<td><span class="descricao-item">Origem do Arranjo: </span>'+formataStringEnumeracao(musica.origemArranjo)+'</td>'		
+	descricaoStr += '		<td><span class="descricao-item">Origem do Arranjo: </span>'+musica.origemArranjo+'</td>'		
 	descricaoStr += '	</tr>'
 	descricaoStr += '	<tr>'
 	descricaoStr += (parseInt(musica.ano))? '<td><span class="descricao-item">Ano de criação: </span>'+musica.ano+'</td>' : '<td><span class="descricao-item">Ano de criação: </span>Desconhecido</td>'
 	descricaoStr += '	</tr>'
 	descricaoStr += '	<tr>'
-	descricaoStr += '		<td><span class="descricao-item">Apresentação do vídeo: </span>'+formataStringEnumeracao(musica.apresentacao)+'</td>'
+	descricaoStr += '		<td><span class="descricao-item">Apresentação do vídeo: </span>'+musica.apresentacao+'</td>'
 	descricaoStr += '	</tr>'		
     $('#descricao-informacoes').html(descricaoStr);
 	
