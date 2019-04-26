@@ -82,7 +82,7 @@ body{
 }
 .conteudo-texto{
 	color: #FFFFFF;
-	font-size: 1em;
+	font-size: 1.2em;
 	text-align: justify;
 	float: right;
 	width: 75%;	
@@ -224,7 +224,7 @@ body{
 		width: 95%;
 	}
 }
-@media screen and (max-width: 8000px) {
+@media screen and (max-width: 1000px) {
 
 	.ratinho{
 		float: none;
