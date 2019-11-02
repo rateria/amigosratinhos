@@ -3,7 +3,7 @@
 }
 
 function formataStringEnumeracao(texto){
-	if(!texto === null){
+	if(!(texto === null)){
 		var autores = texto.split(',');
 		var numAutores = autores.length;
 		var autoriaStr = '';
