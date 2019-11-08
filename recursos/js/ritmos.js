@@ -104,11 +104,19 @@ function carregaDescricaoRitmo(ritmo){
 	descricaoStr += '	</tr>'		
 	$('#descricao-informacoes').html(descricaoStr);
 	
-	$('.botoes-item.bateria').attr('onclick', 'carregarVideo(\''+ritmo.url+'\')');
-	$('.botoes-item.caixa').attr('onclick', 'carregarVideo(\''+ritmo.urlCaixa+'\')');
-	$('.botoes-item.repinique').attr('onclick', 'carregarVideo(\''+ritmo.urlRepinique+'\')');
-	$('.botoes-item.surdo').attr('onclick', 'carregarVideo(\''+ritmo.urlSurdo+'\')');
-	$('.botoes-item.agogo').attr('onclick', 'carregarVideo(\''+ritmo.urlAgogo+'\')');
-	$('.botoes-item.tamborim').attr('onclick', 'carregarVideo(\''+ritmo.urlTamborim+'\')');
-	$('.botoes-item.ganza').attr('onclick', 'carregarVideo(\''+ritmo.urlGanza+'\')');
+	ritmo.url? $('.botoes-item.bateria').attr('onclick', 'carregarVideo(\''+ritmo.url+'\')') : $('.botoes-item.bateria').attr('onclick', '');;
+	ritmo.urlCaixa? $('.botoes-item.caixa').attr('onclick', 'carregarVideo(\''+ritmo.urlCaixa+'\')') : $('.botoes-item.caixa').attr('onclick', '');
+	ritmo.urlRepinique? $('.botoes-item.repinique').attr('onclick', 'carregarVideo(\''+ritmo.urlRepinique+'\')') : $('.botoes-item.repinique').attr('onclick', '');
+	ritmo.urlSurdo? $('.botoes-item.surdo').attr('onclick', 'carregarVideo(\''+ritmo.urlSurdo+'\')') : $('.botoes-item.surdo').attr('onclick', '');
+	ritmo.urlAgogo? $('.botoes-item.agogo').attr('onclick', 'carregarVideo(\''+ritmo.urlAgogo+'\')') : $('.botoes-item.agogo').attr('onclick', '');
+	ritmo.urlTamborim? $('.botoes-item.tamborim').attr('onclick', 'carregarVideo(\''+ritmo.urlTamborim+'\')') : $('.botoes-item.tamborim').attr('onclick', '');
+	ritmo.urlGanza? $('.botoes-item.ganza').attr('onclick', 'carregarVideo(\''+ritmo.urlGanza+'\')') : $('.botoes-item.ganza').attr('onclick', '');
+
+	ritmo.url? 		$('.botoes-item.bateria').removeClass('inexistente') : $('.botoes-item.bateria').addClass('inexistente');
+	ritmo.urlCaixa? 	$('.botoes-item.caixa').removeClass('inexistente') : $('.botoes-item.caixa').addClass('inexistente');
+	ritmo.urlRepinique? $('.botoes-item.repinique').removeClass('inexistente') : $('.botoes-item.repinique').addClass('inexistente');
+	ritmo.urlSurdo? 	$('.botoes-item.surdo').removeClass('inexistente') : $('.botoes-item.surdo').addClass('inexistente');
+	ritmo.urlAgogo? 	$('.botoes-item.agogo').removeClass('inexistente') : $('.botoes-item.agogo').addClass('inexistente');
+	ritmo.urlTamborim? $('.botoes-item.tamborim').removeClass('inexistente') : $('.botoes-item.tamborim').addClass('inexistente');
+	ritmo.urlGanza? 	$('.botoes-item.ganza').removeClass('inexistente') : $('.botoes-item.ganza').addClass('inexistente');
 }

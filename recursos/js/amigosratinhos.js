@@ -1,5 +1,11 @@
 ﻿function carregarVideo(url){
-	$('.conteudo-video').attr('src', 'https://www.youtube.com/embed/'+url);
+	console.log("url: " + url);
+	if (url == ""){
+		$('.conteudo-video').attr('src', '/amigosratinhos/recursos/imagens/indisponivel.png');
+	}
+	else {
+		$('.conteudo-video').attr('src', 'https://www.youtube.com/embed/'+url);
+	}
 }
 
 function formataStringEnumeracao(texto){
